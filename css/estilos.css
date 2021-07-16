@@ -206,3 +206,51 @@ footer #borde{
   padding-right: 15px;
   border-color: #EEBF04;
 }
+
+/*Martínez CSS*/
+.cabecera{
+  margin-top: 100px;
+  background-color: #1a1d24;
+  color: white;
+  text-align: center;
+  padding: 25px 0px;
+}
+
+.titulo{
+  text-align: center;
+  color:rgba(26, 29, 36, 0.95);
+  margin-bottom: 40px;
+
+}
+
+.container-promociones{
+  width: 60%;
+  margin: 20px auto;
+}
+.informacion>div{
+  padding: 12px 0px; 
+  color:rgba(26, 29, 36, 0.95);
+  font-size: larger;
+}
+.informacion p{
+  color:rgba(26, 29, 36, 0.95);
+  margin-bottom: 15px;
+}
+
+.enlace-boton{
+  padding: 15px 30px;
+  background-color: #fcb115;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  font-size: small;
+}
+.enlace-boton:hover{
+  background-color: red;
+
+}
+
+
+
+
