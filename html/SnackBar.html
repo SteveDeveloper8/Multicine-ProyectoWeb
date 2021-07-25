@@ -9,8 +9,8 @@
   <meta name="description" content="Sección para reservar snacks del cine.">
   <link rel="stylesheet" href="../css/estilos.css">
   <link rel="stylesheet" href="../css/snack-bar.css">
-  <script src="../js/snack-bar.js" type="text/javascript"></script>
-  <script type="text/javascript" src="https://kit.fontawesome.com/6faef096ec.js" crossorigin="anonymous"></script>
+  <script src="../js/snack-bar.js" ></script>
+  <script src="https://kit.fontawesome.com/6faef096ec.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
@@ -56,7 +56,7 @@
       <ul>
         <li><a href="../index.html">Inicio</a></li> <!-- TODO: Asanza -->
         <li><a href="#">Cartelera</a></li> <!-- TODO: Lopez -->
-        <li><a href="#">Snackbar</a></li> <!-- TODO: Asanza -->
+        <li><a href="SnackBar.html">Snackbar</a></li> <!-- TODO: Asanza -->
         <li><a href="#">Promociones</a></li> <!-- TODO: Martinez -->
         <li><a href="#">Quienes somos</a></li> <!-- TODO: Lopez -->
         <li><a href="#">Contáctanos</a></li> <!-- TODO: Martinez -->
@@ -65,7 +65,7 @@
     </nav>
   </div>
   </header>
-  <section class="snack-bar">
+    <div class="snack-bar">
       <div class="bar-menu">
         <div id="combos" onclick="cambiarSeccion(this);">
             Combos
@@ -87,7 +87,7 @@
         </div>
       </div>
       <!--Combos-->
-      <div id="primera-seccion" name="combos" class="mostrador">
+      <div id="primera-seccion" class="mostrador combos">
         <div>
             <img src="../img/combo1.jpg" alt="combo 1">
             <p>COMBO 1</p>
@@ -110,7 +110,7 @@
         </div>
       </div>
       <!--Bebidas-->
-      <div name="bebidas" class="mostrador">
+      <div class="mostrador bebidas">
         <div>
             <img src="../img/bebida-grande.jpg" alt="bebida grande">
             <p>BEBIDA GRANDE 44OZ</p>
@@ -133,7 +133,7 @@
         </div>
       </div>
       <!--Snacks-->
-      <div name="snacks" class="mostrador">
+      <div class="mostrador snacks">
         <div>
             <img src="../img/canguil-grande.jpg" alt="cangul grande sal">
             <p>CANGUIL GRANDE SAL</p>
@@ -156,7 +156,7 @@
         </div>
       </div>
       <!--Snacks-->
-      <div name="salsas" class="mostrador">
+      <div class="mostrador salsas">
         <div>
             <img src="../img/salsa-queso.jpg" alt="salsa queso">
             <p>SALSA EXTRA QUESO</p>
@@ -169,7 +169,7 @@
         </div>
       </div>
       <!--Dulces-->
-      <div name="dulces" class="mostrador">
+      <div class="mostrador dulces">
         <div>
             <img src="../img/snickers.jpg" alt="snickers">
             <p>SNICKERS</p>
@@ -192,7 +192,7 @@
         </div>
       </div>
       <!--Promocionales-->
-      <div name="promo" class="mostrador">
+      <div class="mostrador promo">
         <div>
             <img src="../img/pok-black-widow.jpg" alt="pok black widow">
             <p>POK BLACK WIDOW</p>
@@ -214,7 +214,7 @@
             <p><b>$4.99</b></p>
         </div>
       </div>
-  </section>
+    </div>
   <footer>
     <div id="footer">
       <div class="tabla">
@@ -229,7 +229,7 @@
         <a href="#">Donde estámos</a>
       </div>
       <div class="tabla">
-        <p><strong><span id="borde">Servicio Coorporativo</span></strong></p>
+        <p><strong><span class="borde">Servicio Coorporativo</span></strong></p>
 
         <a href="#">Publicidad</a>
         <br>
@@ -238,7 +238,7 @@
         <a href="#">Cumpleaños</a>
       </div>
       <div class="tabla">
-        <p><strong><span id="borde">Redes sociales</span></strong></p>
+        <p><strong><span class="borde">Redes sociales</span></strong></p>
         <div class="red fb">
           <img src="../ico/facebook.ico" style="width:18px; height:18px;" alt="icono">
           <a href="#">Facebook</a>
@@ -258,7 +258,7 @@
       </div>
       <div class="tabla">
         <div class="call-center">
-          <p><span id="borde">Call Center</span></p>
+          <p><span class="borde">Call Center</span></p>
           <p>1-800-691060</p>
           <p>Horario</p>
           <p>10h00 - 21h00</p>

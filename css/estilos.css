@@ -197,7 +197,7 @@ footer .tabla :nth-child(1){
 }
 
 
-footer #borde{
+footer .borde{
   padding-bottom: 5px;
   border-bottom-style: ridge;
   border-left-style: ridge;

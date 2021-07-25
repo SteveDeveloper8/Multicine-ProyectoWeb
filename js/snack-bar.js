@@ -5,16 +5,18 @@ function cambiarSeccion(encabezado)
     limpiarMostrador();
     mostrarSeccion(encabezado.id);
 }
-function mostrarSeccion(id)
+function mostrarSeccion(clase)
 {
-    var seccion=document.getElementsByName(id)[0];
+    var seccion=document.getElementsByClassName(clase)[0]; 
     seccion.style.display="flex";
+    seccion.style.visibility="visible";
 }
 function limpiarMostrador()
 {
     var secciones=document.querySelectorAll(".mostrador")
     secciones.forEach(element => {
         element.style.display="none";
+        element.style.visibility="hidden";
     });
 }
 function limpiarMenu()

@@ -12,9 +12,11 @@
     border: 0.5px solid azure;
     background-color: gray;
     color: azure;
+    border-radius: 10%;
   }
   .mostrador {
     display: none;
+    visibility: hidden;
     flex-wrap: wrap;
     width: 60%;
     margin-left: 20%;
@@ -40,7 +42,11 @@
   }
   #primera-seccion {
       display: flex;
+      visibility: visible;
   }
   #combos {
       background-color: rgb(207, 27, 111);
+  }
+  #snack-bar{
+      padding: 30px 0;
   }
