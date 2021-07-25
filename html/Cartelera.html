@@ -8,12 +8,13 @@
   <meta name="keywords" content="cine,peliculas,movies,entretenimiento,actores,cartelera,estreno">
   <meta name="author" content="Daniel Asanza,Bryan Martínez,Alfredo López,Giampaolo Delgado">
   <meta name="description" content="Aplicacion de cine,proyecto primer parcial, sexto semestre">
-  <link rel="stylesheet" href="../css/estilos.css">
+  <link rel="stylesheet" href="../css/LopezEstilo.css">
+  <script src="../js/Cartelera.js"></script>
   <script src="https://kit.fontawesome.com/6faef096ec.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
-  <title>Multicines</title>
+  <title>Multicines Cartelera</title>
   <style>
     * {
       margin: 0;
@@ -54,251 +55,1582 @@
     <nav class="navegacion">
       <ul>
         <li><a href="index.html">Inicio</a></li> <!-- TODO: Asanza -->
-        <li><a href="#">Cartelera</a></li> <!-- TODO: Lopez -->
+        <li><a href="Cartelera.html">Cartelera</a></li> <!-- TODO: Lopez -->
         <li><a href="#">Snackbar</a></li> <!-- TODO: Asanza -->
         <li><a href="#">Promociones</a></li> <!-- TODO: Martinez -->
-        <li><a href="#">Quienes somos</a></li> <!-- TODO: Lopez -->
+        <li><a href="QuienesSomos.html">Quienes somos</a></li> <!-- TODO: Lopez -->
         <li><a href="#">Contáctanos</a></li> <!-- TODO: Martinez -->
         <!-- TODO: Delgado Registro ** Trabaja con nosotros-->
       </ul>
     </nav>
   </div>
   </header>
-  <div id="container">
-      <div class="peliculas">
-        <div class="imagen">
-          <img src="../img/black-widow.png" alt="Black Widow" class="poster">
+ <div class="tituloCartelera">
+   <h1 style="text-align: center;">
+      CARTELERA MULTICINES
+   </h1>
+   <p >
+     Tu mejor eleccion en experiencia cinematografica
+  </p>
+  <br>
+   <h3 style="text-align-last: center;">
+     Escoge el dia para ver tu pelicula favorita
+   </h3>
+   <br>
+ </div>
+    <section class="diaSemana">
+      <div class="semana">
+        <div id="Lunes" onclick="seleccionarDia(this);">
+            lun.
+            <span class="fechadia">19 jul.2021</span>
         </div>
-        <div class="detalles">
-          <h2>Black Widow</h2>
-          <span class="bloque">
-            <a class="enlacePelicula" href="#">
-              <button class="boton" type="button">
-                <span> ver detalle</span>
-              </button>
-            </a>
-          </span>
-          <div class="detallesPelicula">
-            <div class="clasificacion">
-            12+
-            </div>
-            <div class="duracion">
-              135 minutos
-            </div>
-          </div>
-        </div >
-          <div class="detalleshorarios">
-            <small class="info">
-              * Los horarios aquí expuestos representan el inicio de cada función
-           </small>
-            <div class="contieneHorarios">
-              <div class="horarios">
-              <div class="item">
-                <span class="texto">3D</span>
-                <span class="texto">DOBLADA</span>
-                <div class="ubicacion">
-                  <span class="sillas"> Sillas: </span>
-                  <span class="sillas"> GENERAL </span>
-               </div>
-             </div>
-             <div class="contenedorHora">
-                <div class="hora">
-                  22:30
-                </div>
-              </div>
-             </div>
-            <div class="horarios">
-              <div class="item">
-                <span class="texto">3D</span>
-                <span class="texto">DOBLADA</span>
-               <div class="ubicacion">
-                  <span class="sillas"> Sillas: </span>
-                  <span class="sillas"> GENERAL </span>
-                </div>
-              </div>
-              <div class="contenedorHora">
-                <div class="hora">
-                  21:00
-                </div>
-              </div>
-            </div>
-            <div class="horarios">
-              <div class="item">
-                <span class="texto">2D</span>
-                <span class="texto">DOBLADA</span>
-                <div class="ubicacion">
-                  <span class="sillas"> Sillas: </span>
-                 <span class="sillas"> GENERAL </span>
-                </div>
-              </div>
-              <div class="contenedorHora">
-                <div class="hora">
-                 20:00
-                </div>
-              </div>
-            </div>
-          </div>
+        <div id="Martes" onclick="seleccionarDia(this);">
+            mar.
+            <span class="fechadia">20 jul.2021</span>
+        </div>
+        <div id="Miercoles" onclick="seleccionarDia(this);">
+            mie.
+            <span class="fechadia">21 jul.2021</span>
+        </div>
+        <div id="Jueves" onclick="seleccionarDia(this);">
+            jue.
+            <span class="fechadia">22 jul.2021</span>
+        </div>
+        <div id="Viernes" onclick="seleccionarDia(this);">
+            vie.
+            <span class="fechadia">23 jul.2021</span>
+        </div>
+        <div id="Sabado" onclick="seleccionarDia(this);">
+            sab.
+            <span class="fechadia">24 jul.2021</span>
+        </div>
+        <div id="Domingo" onclick="seleccionarDia(this);">
+            dom.
+            <span class="fechadia">25 jul.2021</span>
         </div>
       </div>
-      <div class="peliculas">
-        <div class="imagen">
-          <img src="../img/duro-de-cuidar.jpg" alt="duro-de-cuidar2" class="poster">
-        </div>
-        <div class="detalles">
-          <h2>Duro de Cuidar 2</h2>
-          <span class="bloque">
-            <a class="enlacePelicula" href="#">
-              <button class="boton" type="button">
-                <span> ver detalle</span>
-              </button>
-            </a>
-          </span>
-          <div class="detallesPelicula">
-            <div class="clasificacion">
-            15+
+      <div class="listaPeliculas">
+        <!--Lunes-->
+        <div id="primera-seleccion"  class="seleccionDia Lunes">
+          <div class="peliculas">
+            <div class="imagen">
+              <img src="../img/black-widow.png" alt="Black Widow" class="poster">
             </div>
-            <div class="duracion">
-              120 minutos
-            </div>
-          </div>
-        </div >
-          <div class="detalleshorarios">
-            <small class="info">
-              * Los horarios aquí expuestos representan el inicio de cada función
-           </small>
-            <div class="contieneHorarios">
-              <div class="horarios">
-              <div class="item">
-                <span class="texto">3D</span>
-                <span class="texto">DOBLADA</span>
-                <div class="ubicacion">
-                  <span class="sillas"> Sillas: </span>
-                  <span class="sillas"> GENERAL </span>
-               </div>
-             </div>
-             <div class="contenedorHora">
-                <div class="hora">
-                  22:30
+            <div class="detalles">
+              <h2>Black Widow</h2>
+              <div class="detallesPelicula">
+                <div class="bloque">
+                  <a class="enlacePelicula" href="#">
+                    ver detalle
+                  </a>
                 </div>
+                 <div class="clasificacion">
+                   12 años |
+                   135 min
+                  </div>
               </div>
-             </div>
-            <div class="horarios">
-              <div class="item">
-                <span class="texto">3D</span>
-                <span class="texto">DOBLADA</span>
-               <div class="ubicacion">
-                  <span class="sillas"> Sillas: </span>
-                  <span class="sillas"> GENERAL </span>
+            </div >
+            <div class="detalleshorarios">
+                <small class="info">
+                  * Los horarios de cada función
+              </small>
+              <br>
+                <div class="contieneHorarios">
+                  <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                  </div>
                 </div>
-              </div>
-              <div class="contenedorHora">
-                <div class="hora">
-                  21:00
+                <div class="contenedorHora">
+                    <div class="hora">
+                      22:30
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="horarios">
-              <div class="item">
-                <span class="texto">2D</span>
-                <span class="texto">DOBLADA</span>
-                <div class="ubicacion">
-                  <span class="sillas"> Sillas: </span>
-                 <span class="sillas"> GENERAL </span>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                  <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                      21:00
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="contenedorHora">
-                <div class="hora">
-                 20:00
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="peliculas">
-        <div class="imagen">
-          <img src="../img/rapidos-y-furiosos-9.jpeg" alt="rapidos-y-furiosos-9" class="poster">
-        </div>
-        <div class="detalles">
-          <h2>Rapidos y Furiosos 9</h2>
-          <span class="bloque">
-            <a class="enlacePelicula" href="#">
-              <button class="boton" type="button">
-                <span> ver detalle</span>
-              </button>
-            </a>
-          </span>
-          <div class="detallesPelicula">
-            <div class="clasificacion">
-            12+
-            </div>
-            <div class="duracion">
-              145 minutos
-            </div>
-          </div>
-        </div >
-          <div class="detalleshorarios">
-            <small class="info">
-              * Los horarios aquí expuestos representan el inicio de cada función
-           </small>
-            <div class="contieneHorarios">
-              <div class="horarios">
-              <div class="item">
-                <span class="texto">3D</span>
-                <span class="texto">DOBLADA</span>
-                <div class="ubicacion">
-                  <span class="sillas"> Sillas: </span>
-                  <span class="sillas"> GENERAL </span>
-               </div>
-             </div>
-             <div class="contenedorHora">
-                <div class="hora">
-                  22:30
-                </div>
-              </div>
-             </div>
-            <div class="horarios">
-              <div class="item">
-                <span class="texto">3D</span>
-                <span class="texto">DOBLADA</span>
-               <div class="ubicacion">
-                  <span class="sillas"> Sillas: </span>
-                  <span class="sillas"> GENERAL </span>
-                </div>
-              </div>
-              <div class="contenedorHora">
-                <div class="hora">
-                  21:00
-                </div>
-              </div>
-            </div>
-            <div class="horarios">
-              <div class="item">
-                <span class="texto">2D</span>
-                <span class="texto">DOBLADA</span>
-                <div class="ubicacion">
-                  <span class="sillas"> Sillas: </span>
-                 <span class="sillas"> GENERAL </span>
-                </div>
-              </div>
-              <div class="contenedorHora">
-                <div class="hora">
-                 20:00
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                    <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                    20:00
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="peliculas">
+            <div class="imagen">
+              <img src="../img/duro-de-cuidar.jpg" alt="duro-de-cuidar2" class="poster">
+            </div>
+            <div class="detalles">
+              <h2>Duro de Cuidar 2</h2>
+              <div class="detallesPelicula">
+                <div class="bloque">
+                  <a class="enlacePelicula" href="#">
+                    ver detalle
+                  </a>
+                </div>
+                 <div class="clasificacion">
+                   15 años |
+                   120 min
+                  </div>
+              </div>
+            </div >
+            <div class="detalleshorarios">
+                <small class="info">
+                  * Los horarios de cada función
+              </small>
+                <div class="contieneHorarios">
+                  <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                  </div>
+                </div>
+                <div class="contenedorHora">
+                    <div class="hora">
+                      20:30
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                  <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                      22:00
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                    <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                    23:00
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="peliculas">
+            <div class="imagen">
+              <img src="../img/rapidos-y-furiosos-9.jpeg" alt="rapidos-y-furiosos-9" class="poster">
+            </div>
+            <div class="detalles">
+              <h2>Rapidos y Furiosos 9</h2>
+              <div class="detallesPelicula">
+                <div class="bloque">
+                  <a class="enlacePelicula" href="#">
+                    ver detalle
+                  </a>
+                </div>
+                 <div class="clasificacion">
+                   12 años |
+                   145 min
+                  </div>
+              </div>
+            </div >
+            <div class="detalleshorarios">
+                <small class="info">
+                  * Los horarios de cada función
+              </small>
+                <div class="contieneHorarios">
+                  <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                  </div>
+                </div>
+                <div class="contenedorHora">
+                    <div class="hora">
+                      19:30
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                  <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                      21:00
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                    <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                    22:30
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-  </div>
-  <section class="banner">
-
-  </section>
+        <!--Martes-->
+        <div  class="seleccionDia Martes">
+          <div class="peliculas">
+            <div class="imagen">
+              <img src="../img/black-widow.png" alt="Black Widow" class="poster">
+            </div>
+            <div class="detalles">
+              <h2>Black Widow</h2>
+              <div class="detallesPelicula">
+                <div class="bloque">
+                  <a class="enlacePelicula" href="#">
+                    ver detalle
+                  </a>
+                </div>
+                 <div class="clasificacion">
+                   12 años |
+                   135 min
+                  </div>
+              </div>
+            </div >
+            <div class="detalleshorarios">
+                <small class="info">
+                  * Los horarios de cada función
+              </small>
+                <div class="contieneHorarios">
+                  <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                  </div>
+                </div>
+                <div class="contenedorHora">
+                    <div class="hora">
+                      22:30
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                  <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                      21:00
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto">2D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                    <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                    20:00
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="peliculas">
+            <div class="imagen">
+              <img src="../img/space-jam-2-una-nueva-era.jpg" alt="space-jam-2-una-nueva-era" class="poster">
+            </div>
+            <div class="detalles">
+              <h2>Space Jam 2 Una Nueva Era</h2>
+              <div class="detallesPelicula">
+                <div class="bloque">
+                  <a class="enlacePelicula" href="#">
+                    ver detalle
+                  </a>
+                </div>
+                 <div class="clasificacion">
+                   12 años |
+                   120 min
+                  </div>
+              </div>
+            </div >
+            <div class="detalleshorarios">
+                <small class="info">
+                  * Los horarios de cada función
+              </small>
+                <div class="contieneHorarios">
+                  <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                  </div>
+                </div>
+                <div class="contenedorHora">
+                    <div class="hora">
+                      21:10
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto">3D</span>
+                    <span class="texto">DOBLADA</span>
+                  <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                      21:00
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                    <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                    20:00
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="peliculas">
+            <div class="imagen">
+              <img src="../img/el-conjuro-3-el-diablo-me-obligo.jpg" alt="el-conjuro-3-el-diablo-me-obligo" class="poster">
+            </div>
+            <div class="detalles">
+              <h2>El Conjuro 3: El Diablo me obligo </h2>
+              <div class="detallesPelicula">
+                <div class="bloque">
+                  <a class="enlacePelicula" href="#">
+                    ver detalle
+                  </a>
+                </div>
+                 <div class="clasificacion">
+                   15 años |
+                   120 min
+                  </div>
+              </div>
+            </div >
+            <div class="detalleshorarios">
+                <small class="info">
+                  * Los horarios de cada función
+              </small>
+                <div class="contieneHorarios">
+                  <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                  </div>
+                </div>
+                <div class="contenedorHora">
+                    <div class="hora">
+                      22:30
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                  <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                      21:00
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                    <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                    20:00
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Miercoles-->
+        <div  class="seleccionDia Miercoles">
+          <div class="peliculas">
+            <div class="imagen">
+              <img src="../img/black-widow.png" alt="Black Widow" class="poster">
+            </div>
+            <div class="detalles">
+              <h2>Black Widow</h2>
+              <div class="detallesPelicula">
+                <div class="bloque">
+                  <a class="enlacePelicula" href="#">
+                    ver detalle
+                  </a>
+                </div>
+                 <div class="clasificacion">
+                   12 años |
+                   135 min
+                  </div>
+              </div>
+            </div >
+            <div class="detalleshorarios">
+                <small class="info">
+                  * Los horarios de cada función
+              </small>
+                <div class="contieneHorarios">
+                  <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                  </div>
+                </div>
+                <div class="contenedorHora">
+                    <div class="hora">
+                      22:30
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto">3D</span>
+                    <span class="texto">DOBLADA</span>
+                  <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                      21:00
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                    <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                    20:00
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="peliculas">
+            <div class="imagen">
+              <img src="../img/g.i.-joe-snake-eyes-85673.jpg" alt="duro-de-cuidar2" class="poster">
+            </div>
+            <div class="detalles">
+              <h2>G.I. Joe: Snake Eyes </h2>
+              <div class="detallesPelicula">
+                <div class="bloque">
+                  <a class="enlacePelicula" href="#">
+                    ver detalle
+                  </a>
+                </div>
+                 <div class="clasificacion">
+                   12 años |
+                   120 min
+                  </div>
+              </div>
+            </div >
+            <div class="detalleshorarios">
+                <small class="info">
+                  * Los horarios de cada función
+              </small>
+                <div class="contieneHorarios">
+                  <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">SUBTITULADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                  </div>
+                </div>
+                <div class="contenedorHora">
+                    <div class="hora">
+                      20:30
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                  <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                      21:00
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                    <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                    20:00
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="peliculas">
+            <div class="imagen">
+              <img src="../img/la-purga-por-siempre.jpg" alt="la-purga-por-siempre" class="poster">
+            </div>
+            <div class="detalles">
+              <h2>La Purga por siempre</h2>
+              <div class="detallesPelicula">
+                <div class="bloque">
+                  <a class="enlacePelicula" href="#">
+                    ver detalle
+                  </a>
+                </div>
+                 <div class="clasificacion">
+                   15 años |
+                   105 min
+                  </div>
+              </div>
+            </div >
+            <div class="detalleshorarios">
+                <small class="info">
+                  * Los horarios de cada función
+              </small>
+                <div class="contieneHorarios">
+                  <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                  </div>
+                </div>
+                <div class="contenedorHora">
+                    <div class="hora">
+                      22:35
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">DOBLADA</span>
+                  <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                      22:00
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">SUBTITULADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                    <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                    20:00
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Jueves-->
+        <div class="seleccionDia Jueves">
+          <div class="peliculas">
+            <div class="imagen">
+              <img src="../img/space-jam-2-una-nueva-era.jpg" alt="space-jam-2-una-nueva-era" class="poster">
+            </div>
+            <div class="detalles">
+              <h2>Space Jam 2 Una Nueva Era</h2>
+              <div class="detallesPelicula">
+                <div class="bloque">
+                  <a class="enlacePelicula" href="#">
+                    ver detalle
+                  </a>
+                </div>
+                 <div class="clasificacion">
+                   12 años |
+                   120 min
+                  </div>
+              </div>
+            </div >
+            <div class="detalleshorarios">
+                <small class="info">
+                  * Los horarios de cada función
+              </small>
+                <div class="contieneHorarios">
+                  <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                  </div>
+                </div>
+                <div class="contenedorHora">
+                    <div class="hora">
+                      21:10
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                  <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                      21:00
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                    <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                    20:00
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="peliculas">
+            <div class="imagen">
+              <img src="../img/duro-de-cuidar.jpg" alt="duro-de-cuidar2" class="poster">
+            </div>
+            <div class="detalles">
+              <h2>Duro de Cuidar 2</h2>
+              <div class="detallesPelicula">
+                <div class="bloque">
+                  <a class="enlacePelicula" href="#">
+                    ver detalle
+                  </a>
+                </div>
+                 <div class="clasificacion">
+                   15 años |
+                   120 min
+                  </div>
+              </div>
+            </div >
+            <div class="detalleshorarios">
+                <small class="info">
+                  * Los horarios de cada función
+              </small>
+                <div class="contieneHorarios">
+                  <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                  </div>
+                </div>
+                <div class="contenedorHora">
+                    <div class="hora">
+                      22:30
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                  <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                      21:00
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                    <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                    20:00
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="peliculas">
+            <div class="imagen">
+              <img src="../img/rapidos-y-furiosos-9.jpeg" alt="rapidos-y-furiosos-9" class="poster">
+            </div>
+            <div class="detalles">
+              <h2>Rapidos y Furiosos 9</h2>
+              <div class="detallesPelicula">
+                <div class="bloque">
+                  <a class="enlacePelicula" href="#">
+                    ver detalle
+                  </a>
+                </div>
+                 <div class="clasificacion">
+                   12 años |
+                   145 min
+                  </div>
+              </div>
+            </div >
+            <div class="detalleshorarios">
+                <small class="info">
+                  * Los horarios de cada función
+              </small>
+                <div class="contieneHorarios">
+                  <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                  </div>
+                </div>
+                <div class="contenedorHora">
+                    <div class="hora">
+                      22:30
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                  <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                      21:00
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                    <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                    20:00
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Viernes-->
+        <div class="seleccionDia Viernes">
+          <div class="peliculas">
+            <div class="imagen">
+              <img src="../img/g.i.-joe-snake-eyes-85673.jpg" alt="duro-de-cuidar2" class="poster">
+            </div>
+            <div class="detalles">
+              <h2>G.I. Joe: Snake Eyes </h2>
+              <div class="detallesPelicula">
+                <div class="bloque">
+                  <a class="enlacePelicula" href="#">
+                    ver detalle
+                  </a>
+                </div>
+                 <div class="clasificacion">
+                   12 años |
+                   120 min
+                  </div>
+              </div>
+            </div >
+            <div class="detalleshorarios">
+                <small class="info">
+                  * Los horarios de cada función
+              </small>
+                <div class="contieneHorarios">
+                  <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">SUBTITULADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                  </div>
+                </div>
+                <div class="contenedorHora">
+                    <div class="hora">
+                      20:30
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                  <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                      21:00
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                    <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                    20:00
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="peliculas">
+            <div class="imagen">
+              <img src="../img/space-jam-2-una-nueva-era.jpg" alt="space-jam-2-una-nueva-era" class="poster">
+            </div>
+            <div class="detalles">
+              <h2>Space Jam 2 Una Nueva Era</h2>
+              <div class="detallesPelicula">
+                <div class="bloque">
+                  <a class="enlacePelicula" href="#">
+                    ver detalle
+                  </a>
+                </div>
+                 <div class="clasificacion">
+                   12 años |
+                   135 min
+                  </div>
+              </div>
+            </div >
+            <div class="detalleshorarios">
+                <small class="info">
+                  * Los horarios de cada función
+              </small>
+                <div class="contieneHorarios">
+                  <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                  </div>
+                </div>
+                <div class="contenedorHora">
+                    <div class="hora">
+                      21:10
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                  <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                      21:00
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                    <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                    20:00
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="peliculas">
+            <div class="imagen">
+              <img src="../img/el-conjuro-3-el-diablo-me-obligo.jpg" alt="el-conjuro-3-el-diablo-me-obligo" class="poster">
+            </div>
+            <div class="detalles">
+              <h2>El Conjuro 3: El Diablo me obligo </h2>
+              <div class="detallesPelicula">
+                <div class="bloque">
+                  <a class="enlacePelicula" href="#">
+                    ver detalle
+                  </a>
+                </div>
+                 <div class="clasificacion">
+                   15 años |
+                   120 min
+                  </div>
+              </div>
+            </div >
+            <div class="detalleshorarios">
+                <small class="info">
+                  * Los horarios de cada función
+              </small>
+                <div class="contieneHorarios">
+                  <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                  </div>
+                </div>
+                <div class="contenedorHora">
+                    <div class="hora">
+                      22:30
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                  <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                      21:00
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                    <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                    20:00
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Sabado-->
+        <div  class="seleccionDia Sabado">
+          <div class="peliculas">
+            <div class="imagen">
+              <img src="../img/space-jam-2-una-nueva-era.jpg" alt="space-jam-2-una-nueva-era" class="poster">
+            </div>
+            <div class="detalles">
+              <h2>Space Jam 2 Una Nueva Era</h2>
+              <div class="detallesPelicula">
+                <div class="bloque">
+                  <a class="enlacePelicula" href="#">
+                    ver detalle
+                  </a>
+                </div>
+                 <div class="clasificacion">
+                   12 años |
+                   120 min
+                  </div>
+              </div>
+            </div >
+            <div class="detalleshorarios">
+                <small class="info">
+                  * Los horarios de cada función
+              </small>
+                <div class="contieneHorarios">
+                  <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                  </div>
+                </div>
+                <div class="contenedorHora">
+                    <div class="hora">
+                      21:10
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                  <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                      21:00
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                    <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                    20:00
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>        
+          <div class="peliculas">
+            <div class="imagen">
+              <img src="../img/el-conjuro-3-el-diablo-me-obligo.jpg" alt="el-conjuro-3-el-diablo-me-obligo" class="poster">
+            </div>
+            <div class="detalles">
+              <h2>El Conjuro 3: El Diablo me obligo </h2>
+              <div class="detallesPelicula">
+                <div class="bloque">
+                  <a class="enlacePelicula" href="#">
+                    ver detalle
+                  </a>
+                </div>
+                 <div class="clasificacion">
+                   15 años |
+                   120 min
+                  </div>
+              </div>
+            </div >
+            <div class="detalleshorarios">
+                <small class="info">
+                  * Los horarios de cada función
+              </small>
+                <div class="contieneHorarios">
+                  <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                  </div>
+                </div>
+                <div class="contenedorHora">
+                    <div class="hora">
+                      22:30
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                  <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                      21:00
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                    <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                    20:00
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="peliculas">
+            <div class="imagen">
+              <img src="../img/rapidos-y-furiosos-9.jpeg" alt="rapidos-y-furiosos-9" class="poster">
+            </div>
+            <div class="detalles">
+              <h2>Rapidos y Furiosos 9</h2>
+              <div class="detallesPelicula">
+                <div class="bloque">
+                  <a class="enlacePelicula" href="#">
+                    ver detalle
+                  </a>
+                </div>
+                 <div class="clasificacion">
+                   12 años |
+                   145 min
+                  </div>
+              </div>
+            </div >
+            <div class="detalleshorarios">
+                <small class="info">
+                  * Los horarios de cada función
+              </small>
+                <div class="contieneHorarios">
+                  <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                  </div>
+                </div>
+                <div class="contenedorHora">
+                    <div class="hora">
+                      22:30
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                  <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                      21:00
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                    <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                    20:00
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Domingo-->
+        <div class="seleccionDia Domingo">
+          <div class="peliculas">
+            <div class="imagen">
+              <img src="../img/g.i.-joe-snake-eyes-85673.jpg" alt="duro-de-cuidar2" class="poster">
+            </div>
+            <div class="detalles">
+              <h2>G.I. Joe: Snake Eyes </h2>
+              <div class="detallesPelicula">
+                <div class="bloque">
+                  <a class="enlacePelicula" href="#">
+                    ver detalle
+                  </a>
+                </div>
+                 <div class="clasificacion">
+                   12 años |
+                   120 min
+                  </div>
+              </div>
+            </div >
+            <div class="detalleshorarios">
+                <small class="info">
+                  * Los horarios de cada función
+              </small>
+                <div class="contieneHorarios">
+                  <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">SUBTITULADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                  </div>
+                </div>
+                <div class="contenedorHora">
+                    <div class="hora">
+                      20:30
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                  <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                      21:00
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                    <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                    20:00
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="peliculas">
+            <div class="imagen">
+              <img src="../img/duro-de-cuidar.jpg" alt="duro-de-cuidar2" class="poster">
+            </div>
+            <div class="detalles">
+              <h2>Duro de Cuidar 2</h2>
+              <div class="detallesPelicula">
+                <div class="bloque">
+                  <a class="enlacePelicula" href="#">
+                    ver detalle
+                  </a>
+                </div>
+                 <div class="clasificacion">
+                   15 años |
+                   120 min
+                  </div>
+              </div>
+            </div >
+            <div class="detalleshorarios">
+                <small class="info">
+                  * Los horarios de cada función
+              </small>
+                <div class="contieneHorarios">
+                  <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                  </div>
+                </div>
+                <div class="contenedorHora">
+                    <div class="hora">
+                      22:30
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                  <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                      21:00
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                    <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                    20:00
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="peliculas">
+            <div class="imagen">
+              <img src="../img/rapidos-y-furiosos-9.jpeg" alt="rapidos-y-furiosos-9" class="poster">
+            </div>
+            <div class="detalles">
+              <h2>Rapidos y Furiosos 9</h2>
+              <div class="detallesPelicula">
+                <div class="bloque">
+                  <a class="enlacePelicula" href="#">
+                    ver detalle
+                  </a>
+                </div>
+                 <div class="clasificacion">
+                   12 años |
+                   145 min
+                  </div>
+              </div>
+            </div >
+            <div class="detalleshorarios">
+                <small class="info">
+                  * Los horarios de cada función
+              </small>
+                <div class="contieneHorarios">
+                  <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                  </div>
+                </div>
+                <div class="contenedorHora">
+                    <div class="hora">
+                      22:30
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 3D</span>
+                    <span class="texto">DOBLADA</span>
+                  <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                      <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                      21:00
+                    </div>
+                  </div>
+                </div>
+                <div class="horarios">
+                  <div class="item">
+                    <span class="texto"> 2D</span>
+                    <span class="texto">DOBLADA</span>
+                    <div class="ubicacion">
+                      <span class="sillas"> Sillas: </span>
+                    <span class="sillas"> GENERAL </span>
+                    </div>
+                  </div>
+                  <div class="contenedorHora">
+                    <div class="hora">
+                    20:00
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </section>
+  
 
   <footer>
     <div id="footer">
       <div class="tabla">
-        <p><strong><span id="borde">Contáctanos</span></strong></p>
+        <p><strong><span class="borde">Contáctanos</span></strong></p>
 
         <a href="#">Escríbenos</a>
         <br>
@@ -309,7 +1641,7 @@
         <a href="#">Donde estámos</a>
       </div>
       <div class="tabla">
-        <p><strong><span id="borde">Servicio Coorporativo</span></strong></p>
+        <p><strong><span class="borde">Servicio Coorporativo</span></strong></p>
 
         <a href="#">Publicidad</a>
         <br>
@@ -318,21 +1650,21 @@
         <a href="#">Cumpleaños</a>
       </div>
       <div class="tabla">
-        <p><strong><span id="borde">Redes sociales</span></strong></p>
+        <p><strong><span class="borde">Redes sociales</span></strong></p>
         <div class="red fb">
-          <img src="ico/facebook.ico" style="width:18px; height:18px;" alt="icono">
+          <img src="../ico/facebook.ico" style="width:18px; height:18px;" alt="icono">
           <a href="#">Facebook</a>
         </div>
         <div class="red">
-          <img src="ico/twitter.ico" style="width:22px; height:22px;" alt="icono">
+          <img src="../ico/twitter.ico" style="width:22px; height:22px;" alt="icono">
           <a href="#">Twitter</a>
         </div>
         <div class="red">
-          <img src="ico/youtube.ico" style="width:22px; height:22px;" alt="icono">
+          <img src="../ico/youtube.ico" style="width:22px; height:22px;" alt="icono">
           <a href="#">Youtube</a>
         </div>
         <div class="red">
-          <img src="ico/instagram.ico" style="width:24px; height:24px;" alt="icono">
+          <img src="../ico/instagram.ico" style="width:24px; height:24px;" alt="icono">
           <a href="#">Instagram</a>
         </div>
       </div>

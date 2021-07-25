@@ -108,11 +108,198 @@ header {
     border-left-style: inset;
     color: #D74A95;
   }
-  
+  /*Cartelera*/
+  .tituloCartelera{
+    margin-top: 120px;
+    width: 100%;
+    background-color: #1a1d24;
+    color:#fff;
+    padding: 25px 0px;
+    margin-bottom: 40px;
+  }
+  .tituloCartelera p{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .detalles{
+    border: 1px solid silver ;
+    margin-top: 10px;
 
+  }
+  .detalles h2{
+    margin: 10px;
+    font-size: 19px;
+  }
+  .detalleshorarios{
+    border: 1px solid silver;
+    margin:5px 0px;
+    padding: 5px;
+  }
+  .peliculas{
+    margin:auto;
+  }
+  .contieneHorarios{
+    margin: 10px;
+  }
+  .contieneHorarios div{
+    margin: 5px;
+    border: 1px solid silver;
+  }
+  .detallesPelicula{
+    display: flex;
+  }
+  .semana {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    justify-content: center;
+  }
+  .semana div {
+    padding: 15px;
+    border: 0.5px solid azure;
+    background-color: gray;
+    color: azure;
+    border-radius: 8%;
+  }
+  .seleccionDia {
+    display: none;
+    visibility: hidden;
+  }
+  .semana div:hover {
+    cursor: pointer;
+  }
+  #primera-seleccion {
+      display: flex;
+      visibility: visible;
  
-  
-  
+  }
+  #Lunes {
+    background-color: rgb(35, 153, 207);
+  }
+  .clasificacion{
+    margin-top: 19px;
+    font-size: 17px;
+    padding: 5px;
+  }
+
+  .enlacePelicula{
+    padding: 15px 30px;
+    background-color: #fcb115;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    font-size: small;
+    text-transform:capitalize;
+    border: none;
+    margin: 10px;
+
+  }
+  .enlacePelicula:hover{
+    background-color: red;
+  }
+  .texto{
+    margin-left: 5px;
+  }
+  .listaPeliculas{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 90px;
+    margin-bottom: 50px;
+  }
+  .imagen img{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+  /*QUIENESsomos*/
+  .tituloSomos{
+    margin-top: 120px;
+    width: 100%;
+    background-color: #1a1d24;
+    color:#fff;
+    padding: 25px 0px;
+    margin-bottom: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .Somos{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .encuentranos{
+    margin-top: 20px;
+  }
+  .Locaciones {
+    margin-top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: center;
+    
+  }
+  .Locaciones div {
+    padding: 15px 30px;
+    margin: 0 15px;
+    border: 0.5px solid azure;
+    background-color: gray;
+    color: azure;
+    border-radius: 10%;
+  }
+  .seleccionLugar {
+    margin-top: 18px;
+    display: none;
+    visibility: hidden;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: center;
+    
+  }
+  .parrafo{
+    font-size: 17px;
+  }
+  .seleccionLugar div p{
+    font-size: 15pt;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .seleccionLugar div img {
+    
+    width: 50%;
+    height: 30%;
+    border: 2px solid #fcb115;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .imgS{
+    display: flex;
+    justify-content: center;
+  }
+  .Locaciones div:hover {
+    cursor: pointer;
+  }
+  #primera-seleccion2 {
+      display: flex;
+      visibility: visible;
+  }
+  #Guayaquil {
+    background-color: rgb(35, 153, 207);
+  }   
+  .final{
+    margin-top: 30px;
+
+  }
+   
   /*FOOOTERRRRRRRRR*/
   footer {
     width: 100%;
@@ -175,7 +362,7 @@ header {
   }
   
   
-  footer #borde{
+  footer .borde{
     padding-bottom: 5px;
     border-bottom-style: ridge;
     border-left-style: ridge;
