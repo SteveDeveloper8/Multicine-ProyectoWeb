@@ -109,22 +109,7 @@ header #inicioSesion:hover {
   color: #D74A95;
 }
 
-/*
-@keyframes efecto-luz-registro {
-  from{
-    border-color:#0CC3D2;
-    color:#0CC3D2;
-  }
-}
 
-@keyframes efecto-luz-inicioSesion {
-  from{
-    border-color: #D74A95;
-    color:#D74A95;
-  }
-}*/
-
-/*BANNNERRRR*/
 .banner {
   margin-top: 110px;
   width: 100%;
@@ -135,7 +120,7 @@ header #inicioSesion:hover {
 }
 
 
-/*FOOOTERRRRRRRRR*/
+
 footer {
   width: 100%;
   background: #1a1d24;
@@ -197,7 +182,7 @@ footer .tabla :nth-child(1){
 }
 
 
-footer #borde{
+footer .borde{
   padding-bottom: 5px;
   border-bottom-style: ridge;
   border-left-style: ridge;
@@ -251,6 +236,72 @@ footer #borde{
 
 }
 
+.texto-descripcion p{
+  color:rgba(26, 29, 36, 0.95);
+  padding: 12px 0px; 
+  margin: 20px auto;
+  font-size: 16px;
+}
+
+.container-contactanos{
+  width: 60%;
+  margin: 20px auto;
+}
+
+.formularios{
+  background-color: #f7f7f7;
+  width: 100%;
+  padding: 30px;
+  margin: 0 auto;
+  margin-top: 30px;
+  border-radius: 4px;
+}
+
+.formularios .formItem{
+  width: 100%;
+  background-color: #e5e5e5;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.btn{
+  width: 30%;
+  background-color: #fcb115;
+  border-radius: 5px;
+  padding: 15px 30px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+ 
+
+}
+
+.row{
+  display: flex;
+  padding: 5px;
+  width: 100%;
+}
+
+.col-md-6{
+  width: 50%;
+  padding: 5px 0;
+  margin: 0 10px;
+  
+}
+
+#form-contactanos{
+  background: #ebebeb;
+}
+.text-center{
+ 
+  text-align: center;
+}
+.informacion-extra{
+  padding-top: 30px;
+}
 
 
 
