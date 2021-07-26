@@ -1,10 +1,11 @@
 header {
   position: fixed;
   top: 0;
+  z-index: 50;
 }
 
 header .header-top {
-  background-color: rgba(26, 29, 36, 0.95);
+  background-color: rgba(26, 29, 36, 0.938);
   display: flex;
   justify-content: flex-end;
 }
@@ -109,30 +110,256 @@ header #inicioSesion:hover {
   color: #D74A95;
 }
 
-/*
-@keyframes efecto-luz-registro {
-  from{
-    border-color:#0CC3D2;
-    color:#0CC3D2;
-  }
+/*SLIDEEEEEEER*/
+.container-slider {
+  margin-top: 130px;
+  overflow: hidden;
 }
 
-@keyframes efecto-luz-inicioSesion {
-  from{
-    border-color: #D74A95;
-    color:#D74A95;
-  }
-}*/
+.slider {
+  display: flex;
+  width: 600%;
+  height: 460px;
+  margin-left: -100%;
+}
 
-/*BANNNERRRR*/
-.banner {
-  margin-top: 110px;
+.slider__img {
+  display: block;
   width: 100%;
-  height: 463px;
-  background-image: url(../img/banner1.jpg);
-  background-position: center;
-  background-size: contain;
+  height: 100%;
+  object-fit: cover;
 }
+
+.slider__btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.7);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  font-weight: bold;
+  font-family: monospace;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+
+}
+
+.slider__btn:hover {
+  background: #fff;
+}
+
+.slider__btn--left {
+  left: 10px;
+}
+
+.slider__btn--right {
+  right: 10px;
+}
+
+/*PROMO DINNER*/
+.promoDinner {
+  padding: 25px;
+  text-align: center;
+  background: #1a1d24;
+}
+
+/*CARTERLERA/PREVENTASSS*/
+.container {
+  padding: 25px;
+  margin: auto;
+  display: flex;
+}
+
+.container .carteleraEstreno {
+  width: 80%;
+}
+
+.container .publicidad {
+  width: 20%;
+}
+
+.carteleraEstreno .peliculas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+
+.carteleraEstreno .peliculas .peliculaDiv {
+  padding: 20px;
+  width: 33%;
+}
+
+.carteleraEstreno .peliculas .peliculaDiv img:hover{
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0,0,0,0.9);
+  transition: all 0.8s;
+}
+
+.carteleraEstreno .peliculas .peliculaDiv>a {
+  display: inline-block;
+}
+
+.peliculas .peliculaDiv .peli {
+  width: 100%;
+  display:flex;
+  justify-content: center;
+}
+
+.peliculas .peliculaDiv .peli img {
+  width: 80%;
+  height: 310px;
+}
+
+
+.peliculas .peliculaDiv .btn-comprar {
+  width: 80%;
+  height: auto;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px groove #0072bc;
+  color:#0072bc;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 28px;
+  margin-top: 5px;
+}
+.peliculas .peliculaDiv .btn-comprar:hover{
+  background-color:#EEBF04;
+  border: 1.5px groove #EEBF04;
+  color:black;
+  box-shadow: 0 12px 16px rgba(0,0,0,0.3);
+}
+.container .publicidad >a{
+  background: #EEBF04;
+  color:#000000;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  display: inline-block;
+  font-weight: bold;
+  width: 100%;
+}
+
+.container .publicidad{
+  text-align: center;
+  width: 20%;
+}
+
+.container .publicidadDiner img{
+  width: 100%;
+}
+
+/*FORMULARIO*/
+
+#form{
+  background-color: #ebebeb;
+}
+#formulario{
+  width: 90%;
+  margin:0 auto;
+  margin-top: 110px;
+}
+
+#formulario h1{
+  padding: 23px 0;
+  font-weight: bold;
+}
+
+#formulario .body-formulario{
+  background-color: #f7f7f7;
+  border-radius: 10px;
+}
+
+#formulario #titulo{
+  padding:10px 20px;
+  border-bottom: 1px solid #0072bc;
+  color: #0072bc;
+}
+
+#formulario .row{
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.row-col{
+  width: 50%;
+  display:flex;
+  padding: 5px 0;
+}
+
+.row-col .label{
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+
+.row-col .no-center{
+  width: 30%;
+  display: flex;
+  padding-top: 6px;
+}
+
+.row-col .input{
+  width: 70%;
+}
+
+.row-col input{
+  width: 85%;
+  height: 35px;
+  border:1px solid #ccc;
+  background-color: #e5e5e5;
+  display: block;
+  padding-left: 5px;
+  font-size: 15px;
+}
+
+.row-col select{
+  width: 85%;
+  height: 35px;
+  border:1px solid #ccc;
+  background-color: #e5e5e5;
+  padding-left: 5px;
+  font-size: 15px;
+}
+
+.row-col textarea{
+  padding: 5px;
+  font-size: 15px;
+}
+
+
+#formulario #campos{
+  padding:15px;
+}
+#formulario #campos label{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#formulario #button{
+  text-align: center;
+  margin-top: 15px;
+
+} 
+#formulario .btnContinue{
+  border:1px solid #0072bc;
+  border-radius: 3px;
+  color: #0072bc;
+  cursor: pointer;
+  padding: 10px 50px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+
+
 
 
 /*FOOOTERRRRRRRRR*/
@@ -153,34 +380,31 @@ footer .tabla {
   width: 25%;
   font-size: 15px;
   color: #fff;
-
 }
 
-.tabla a{
+.tabla a {
   display: inline-block;
-  padding-bottom:5px;
+  padding-bottom: 5px;
 }
 
-.tabla .red{
+.tabla .red {
   display: flex;
 }
 
-.red img{
+.red img {
   margin-right: 8px;
 }
 
-.fb img{
+.fb img {
   margin-left: 2px;
 }
 
-
-
-footer .tabla a{
+footer .tabla a {
   text-decoration: none;
   color: #fff;
 }
 
-.call-center{
+.call-center {
   margin-top: 35px;
   background-color: #242831;
   text-align: center;
@@ -188,16 +412,15 @@ footer .tabla a{
   border-style: groove;
 }
 
-footer .tabla a:hover{
+footer .tabla a:hover {
   font-weight: bold;
 }
 
-footer .tabla :nth-child(1){
+footer .tabla :nth-child(1) {
   margin-bottom: 20px;
 }
 
-
-footer #borde{
+footer #borde {
   padding-bottom: 5px;
   border-bottom-style: ridge;
   border-left-style: ridge;
